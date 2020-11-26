@@ -57,8 +57,7 @@ Verify plan details of Ulip Policy
       ${BaseSumAssured}=  RCD  Sheet1  ${i}  35
       ${RiderSumAssuredLocator}=  RCD  Sheet1  ${i}  36
       ${RiderSumAssured}=  RCD  Sheet1  ${i}  37
-      ${JointLifeSumAssuredLocator}=  RCD  Sheet1  ${i}  38
-      ${JointLifeSumAssured}=  RCD  Sheet1  ${i}  39
+      
 
      BuiltIn.exit for loop if      ${i}==3
 
