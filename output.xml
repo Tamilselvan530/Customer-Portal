@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200915 13:37:14.497" rpa="false">
+<suite id="s1" name="Login2" source="C:\Users\SS372669\PycharmProjects\Customer_Portal\testcases\login2.robot">
+<test id="s1-t1" name="Test1">
+<kw name="Verify plan details of Ulip Policy">
+<kw name="RNR" library="LoginKeywords">
+<arguments>
+<arg>Sheet2</arg>
+</arguments>
+<assign>
+<var>${datarows}</var>
+</assign>
+<kw name="Fetch Number Of Rows" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+</arguments>
+<assign>
+<var>${maxr}</var>
+</assign>
+<msg timestamp="20200915 13:37:18.865" level="INFO">${maxr} = 1274</msg>
+<status status="PASS" starttime="20200915 13:37:18.864" endtime="20200915 13:37:18.865"></status>
+</kw>
+<msg timestamp="20200915 13:37:18.866" level="INFO">${datarows} = 1274</msg>
+<status status="PASS" starttime="20200915 13:37:18.864" endtime="20200915 13:37:18.866"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet2</arg>
+<arg>12</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${cellvalue}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200915 13:37:18.866" level="INFO">http://10.157.17.27/</msg>
+<msg timestamp="20200915 13:37:18.866" level="INFO">${celldata} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200915 13:37:18.866" endtime="20200915 13:37:18.866"></status>
+</kw>
+<msg timestamp="20200915 13:37:18.867" level="INFO">${cellvalue} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200915 13:37:18.866" endtime="20200915 13:37:18.867"></status>
+</kw>
+<kw name="${i} IN RANGE [ 12 | ${datarows}+1 ]" type="for">
+<kw name="${i} = 12" type="foritem">
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet2</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${SiteUrl}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200915 13:37:18.869" level="INFO">http://10.157.17.27/</msg>
+<msg timestamp="20200915 13:37:18.869" level="INFO">${celldata} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200915 13:37:18.868" endtime="20200915 13:37:18.869"></status>
+</kw>
+<msg timestamp="20200915 13:37:18.869" level="INFO">${SiteUrl} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200915 13:37:18.867" endtime="20200915 13:37:18.869"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet2</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${Browser}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200915 13:37:18.869" level="INFO">chrome</msg>
+<msg timestamp="20200915 13:37:18.869" level="INFO">${celldata} = chrome</msg>
+<status status="PASS" starttime="20200915 13:37:18.869" endtime="20200915 13:37:18.869"></status>
+</kw>
+<msg timestamp="20200915 13:37:18.869" level="INFO">${Browser} = chrome</msg>
+<status status="PASS" starttime="20200915 13:37:18.869" endtime="20200915 13:37:18.869"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet2</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${UserID}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200915 13:37:18.870" level="INFO">uatdemoa11</msg>
+<msg timestamp="20200915 13:37:18.870" level="INFO">${celldata} = uatdemoa11</msg>
+<status status="PASS" starttime="20200915 13:37:18.870" endtime="20200915 13:37:18.870"></status>
+</kw>
+<msg timestamp="20200915 13:37:18.870" level="INFO">${UserID} = uatdemoa11</msg>
+<status status="PASS" starttime="20200915 13:37:18.869" endtime="20200915 13:37:18.870"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet2</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${Password}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200915 13:37:18.871" level="INFO">pass@1234</msg>
+<msg timestamp="20200915 13:37:18.871" level="INFO">${celldata} = pass@1234</msg>
+<status status="PASS" starttime="20200915 13:37:18.871" endtime="20200915 13:37:18.871"></status>
+</kw>
+<msg timestamp="20200915 13:37:18.872" level="INFO">${Password} = pass@1234</msg>
+<status status="PASS" starttime="20200915 13:37:18.871" endtime="20200915 13:37:18.872"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==100</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:37:18.872" endtime="20200915 13:37:18.872"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:18.872" level="INFO">${SiteUrl} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200915 13:37:18.872" endtime="20200915 13:37:18.872"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:18.873" level="INFO">${Browser} = chrome</msg>
+<status status="PASS" starttime="20200915 13:37:18.873" endtime="20200915 13:37:18.873"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${UserID}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:18.873" level="INFO">${UserID} = uatdemoa11</msg>
+<status status="PASS" starttime="20200915 13:37:18.873" endtime="20200915 13:37:18.873"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:18.874" level="INFO">${Password} = pass@1234</msg>
+<status status="PASS" starttime="20200915 13:37:18.873" endtime="20200915 13:37:18.874"></status>
+</kw>
+<kw name="Open My Browser" library="LoginKeywords">
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:18.875" level="INFO">Opening browser 'chrome' to base url 'http://10.157.17.27/'.</msg>
+<status status="PASS" starttime="20200915 13:37:18.874" endtime="20200915 13:37:38.295"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200915 13:37:38.295" endtime="20200915 13:37:38.421"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:18.874" endtime="20200915 13:37:38.421"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:37:38.421" endtime="20200915 13:37:38.422"></status>
+</kw>
+<kw name="Enter UserID" library="LoginKeywords">
+<arguments>
+<arg>${UserID}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UserID_TextBox}</arg>
+<arg>${UserID}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:38.425" level="INFO">Typing text 'uatdemoa11' into text field 'name:userId'.</msg>
+<status status="PASS" starttime="20200915 13:37:38.424" endtime="20200915 13:37:41.565"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:38.422" endtime="20200915 13:37:41.565"></status>
+</kw>
+<kw name="Scroll page till checkuserID" library="LoginKeywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Scroll_Page_till_ChechuserID}</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:37:41.566" endtime="20200915 13:37:43.846"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:41.565" endtime="20200915 13:37:43.846"></status>
+</kw>
+<kw name="Click CheckUserID" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${CheckUserID_Button}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:43.847" level="INFO">Clicking button 'xpath://button[contains(text(),'Check User ID')]'.</msg>
+<status status="PASS" starttime="20200915 13:37:43.847" endtime="20200915 13:37:48.965"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:43.846" endtime="20200915 13:37:48.966"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:37:48.966" endtime="20200915 13:37:49.968"></status>
+</kw>
+<kw name="Click continue with existing ID" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Continue_CTA}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:49.970" level="INFO">Clicking button 'xpath://button[@class='btn btn-outline']'.</msg>
+<status status="PASS" starttime="20200915 13:37:49.969" endtime="20200915 13:37:55.065"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:49.968" endtime="20200915 13:37:55.065"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:37:55.066" endtime="20200915 13:37:56.067"></status>
+</kw>
+<kw name="Enter valid password" library="LoginKeywords">
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_TextBox}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:56.068" level="INFO">Typing text 'pass@1234' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20200915 13:37:56.067" endtime="20200915 13:37:59.147"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:56.067" endtime="20200915 13:37:59.147"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:37:59.148" endtime="20200915 13:37:59.149"></status>
+</kw>
+<kw name="Click Submit" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit_Button}</arg>
+</arguments>
+<msg timestamp="20200915 13:37:59.150" level="INFO">Clicking button 'xpath://button[contains(text(),'Submit')]'.</msg>
+<status status="PASS" starttime="20200915 13:37:59.150" endtime="20200915 13:38:04.225"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:37:59.149" endtime="20200915 13:38:04.225"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>25seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200915 13:38:04.225" endtime="20200915 13:38:05.227"></status>
+</kw>
+<kw name="Verify whatsapp PopUp" library="LoginKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${WhatsApp_Text}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200915 13:38:07.251" level="INFO">${text} = </msg>
+<status status="PASS" starttime="20200915 13:38:05.227" endtime="20200915 13:38:07.251"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${text}"=="WhatsApp Opt-in"</arg>
+<arg>Click popUp cross icon</arg>
+<arg>ELSE</arg>
+<arg>Verify Dashboard</arg>
+</arguments>
+<kw name="Verify Dashboard" library="LoginKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>DashBoard</arg>
+</arguments>
+<msg timestamp="20200915 13:38:09.281" level="INFO">Current page contains text 'DashBoard'.</msg>
+<status status="PASS" starttime="20200915 13:38:07.254" endtime="20200915 13:38:09.281"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:38:07.253" endtime="20200915 13:38:09.282"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:38:07.252" endtime="20200915 13:38:09.282"></status>
+</kw>
+<status status="PASS" starttime="20200915 13:38:05.227" endtime="20200915 13:38:09.282"></status>
+</kw>
+<kw name="Click policy details icon" library="DashboardScreen">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PolicyDetails_Icon}</arg>
+</arguments>
+<msg timestamp="20200915 13:38:09.284" level="INFO">Clicking element 'xpath://span[@class='icon icon-policy-details']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200915 13:38:12.715" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200915 13:38:11.407" endtime="20200915 13:38:12.715"></status>
+</kw>
+<msg timestamp="20200915 13:38:12.918" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="icon icon-policy-details"&gt;&lt;/span&gt; is not clickable at point (78, 389). Other element would receive the click: &lt;span class="bs-loader  "&gt;&lt;/span&gt;
+  (Session info: chrome=85.0.4183.102)
+</msg>
+<status status="FAIL" starttime="20200915 13:38:09.284" endtime="20200915 13:38:12.918"></status>
+</kw>
+<status status="FAIL" starttime="20200915 13:38:09.283" endtime="20200915 13:38:12.919"></status>
+</kw>
+<status status="FAIL" starttime="20200915 13:37:18.867" endtime="20200915 13:38:12.919"></status>
+</kw>
+<status status="FAIL" starttime="20200915 13:37:18.867" endtime="20200915 13:38:12.919"></status>
+</kw>
+<status status="FAIL" starttime="20200915 13:37:18.864" endtime="20200915 13:38:12.920"></status>
+</kw>
+<status status="FAIL" starttime="20200915 13:37:18.863" endtime="20200915 13:38:12.921" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="icon icon-policy-details"&gt;&lt;/span&gt; is not clickable at point (78, 389). Other element would receive the click: &lt;span class="bs-loader  "&gt;&lt;/span&gt;
+  (Session info: chrome=85.0.4183.102)
+</status>
+</test>
+<status status="FAIL" starttime="20200915 13:37:14.499" endtime="20200915 13:38:12.924"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Login2">Login2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,2735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200826 19:24:14.607" rpa="false">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Login" source="C:\Users\SS372669\PycharmProjects\Customer_Portal\testcases\Login.robot">
+<test id="s1-s1-t1" name="Test1">
+<kw name="Verify plan details of Ulip Policy">
+<kw name="RNR" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+</arguments>
+<assign>
+<var>${datarows}</var>
+</assign>
+<kw name="Fetch Number Of Rows" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+</arguments>
+<assign>
+<var>${maxr}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.088" level="INFO">${maxr} = 86</msg>
+<status status="PASS" starttime="20200826 19:24:15.087" endtime="20200826 19:24:15.088"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.088" level="INFO">${datarows} = 86</msg>
+<status status="PASS" starttime="20200826 19:24:15.087" endtime="20200826 19:24:15.088"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${cellvalue}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.088" level="INFO">http://10.157.17.27/</msg>
+<msg timestamp="20200826 19:24:15.089" level="INFO">${celldata} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:24:15.088" endtime="20200826 19:24:15.089"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.089" level="INFO">${cellvalue} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:24:15.088" endtime="20200826 19:24:15.089"></status>
+</kw>
+<kw name="${i} IN RANGE [ 2 | ${datarows}+1 ]" type="for">
+<kw name="${i} = 2" type="foritem">
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${SiteUrl}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.090" level="INFO">http://10.157.17.27/</msg>
+<msg timestamp="20200826 19:24:15.090" level="INFO">${celldata} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:24:15.089" endtime="20200826 19:24:15.090"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.090" level="INFO">${SiteUrl} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:24:15.089" endtime="20200826 19:24:15.090"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${Browser}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.090" level="INFO">chrome</msg>
+<msg timestamp="20200826 19:24:15.091" level="INFO">${celldata} = chrome</msg>
+<status status="PASS" starttime="20200826 19:24:15.090" endtime="20200826 19:24:15.091"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.091" level="INFO">${Browser} = chrome</msg>
+<status status="PASS" starttime="20200826 19:24:15.090" endtime="20200826 19:24:15.091"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${UserID}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.091" level="INFO">Demouser</msg>
+<msg timestamp="20200826 19:24:15.091" level="INFO">${celldata} = Demouser</msg>
+<status status="PASS" starttime="20200826 19:24:15.091" endtime="20200826 19:24:15.091"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.092" level="INFO">${UserID} = Demouser</msg>
+<status status="PASS" starttime="20200826 19:24:15.091" endtime="20200826 19:24:15.092"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${Password}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.092" level="INFO">pass@1234</msg>
+<msg timestamp="20200826 19:24:15.092" level="INFO">${celldata} = pass@1234</msg>
+<status status="PASS" starttime="20200826 19:24:15.092" endtime="20200826 19:24:15.092"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.093" level="INFO">${Password} = pass@1234</msg>
+<status status="PASS" starttime="20200826 19:24:15.092" endtime="20200826 19:24:15.093"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${ViewDetailsLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.093" level="INFO">//li[1]//div[1]//div[2]//div[1]//button[1]</msg>
+<msg timestamp="20200826 19:24:15.093" level="INFO">${celldata} = //li[1]//div[1]//div[2]//div[1]//button[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.093" endtime="20200826 19:24:15.093"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.093" level="INFO">${ViewDetailsLocator} = //li[1]//div[1]//div[2]//div[1]//button[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.093" endtime="20200826 19:24:15.093"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>6</arg>
+</arguments>
+<assign>
+<var>${PolicyNumberLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.094" level="INFO">//label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.094" level="INFO">${celldata} = //label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.094" endtime="20200826 19:24:15.094"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.094" level="INFO">${PolicyNumberLocator} = //label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.094" endtime="20200826 19:24:15.094"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${PolicyNumber}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.095" level="INFO">002270891</msg>
+<msg timestamp="20200826 19:24:15.095" level="INFO">${celldata} = 002270891</msg>
+<status status="PASS" starttime="20200826 19:24:15.095" endtime="20200826 19:24:15.095"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.095" level="INFO">${PolicyNumber} = 002270891</msg>
+<status status="PASS" starttime="20200826 19:24:15.094" endtime="20200826 19:24:15.095"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${OwnerNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.096" level="INFO">//label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.097" level="INFO">${celldata} = //label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.096" endtime="20200826 19:24:15.097"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.097" level="INFO">${OwnerNameLocator} = //label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.096" endtime="20200826 19:24:15.097"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>9</arg>
+</arguments>
+<assign>
+<var>${OwnerName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.098" level="INFO">MR. CHETAN GHARAT</msg>
+<msg timestamp="20200826 19:24:15.099" level="INFO">${celldata} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.098" endtime="20200826 19:24:15.099"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.099" level="INFO">${OwnerName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.097" endtime="20200826 19:24:15.099"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>10</arg>
+</arguments>
+<assign>
+<var>${ClientIDLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.100" level="INFO">//label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.100" level="INFO">${celldata} = //label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.099" endtime="20200826 19:24:15.100"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.100" level="INFO">${ClientIDLocator} = //label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.099" endtime="20200826 19:24:15.100"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>11</arg>
+</arguments>
+<assign>
+<var>${ClientID}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.101" level="INFO">4623681143</msg>
+<msg timestamp="20200826 19:24:15.101" level="INFO">${celldata} = 4623681143</msg>
+<status status="PASS" starttime="20200826 19:24:15.101" endtime="20200826 19:24:15.101"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.101" level="INFO">${ClientID} = 4623681143</msg>
+<status status="PASS" starttime="20200826 19:24:15.100" endtime="20200826 19:24:15.101"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${PlanNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.102" level="INFO">//label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.102" level="INFO">${celldata} = //label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.102" endtime="20200826 19:24:15.102"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.102" level="INFO">${PlanNameLocator} = //label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.101" endtime="20200826 19:24:15.102"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>13</arg>
+</arguments>
+<assign>
+<var>${PlanName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.103" level="INFO">Universal Life Insurance Coverage</msg>
+<msg timestamp="20200826 19:24:15.103" level="INFO">${celldata} = Universal Life Insurance Coverage</msg>
+<status status="PASS" starttime="20200826 19:24:15.103" endtime="20200826 19:24:15.103"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.103" level="INFO">${PlanName} = Universal Life Insurance Coverage</msg>
+<status status="PASS" starttime="20200826 19:24:15.102" endtime="20200826 19:24:15.103"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>14</arg>
+</arguments>
+<assign>
+<var>${PurposeOfInsuranceLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.104" level="INFO">//label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.104" level="INFO">${celldata} = //label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.104" endtime="20200826 19:24:15.104"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.104" level="INFO">${PurposeOfInsuranceLocator} = //label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.103" endtime="20200826 19:24:15.104"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>15</arg>
+</arguments>
+<assign>
+<var>${PurposeOfInsurance}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.105" level="INFO">NA</msg>
+<msg timestamp="20200826 19:24:15.105" level="INFO">${celldata} = NA</msg>
+<status status="PASS" starttime="20200826 19:24:15.105" endtime="20200826 19:24:15.105"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.105" level="INFO">${PurposeOfInsurance} = NA</msg>
+<status status="PASS" starttime="20200826 19:24:15.104" endtime="20200826 19:24:15.105"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>16</arg>
+</arguments>
+<assign>
+<var>${e-InsuranceNumberLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.106" level="INFO">//label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.106" level="INFO">${celldata} = //label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.106" endtime="20200826 19:24:15.106"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.106" level="INFO">${e-InsuranceNumberLocator} = //label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.105" endtime="20200826 19:24:15.106"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>17</arg>
+</arguments>
+<assign>
+<var>${e-InsuranceNumber}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.107" level="INFO">-</msg>
+<msg timestamp="20200826 19:24:15.107" level="INFO">${celldata} = -</msg>
+<status status="PASS" starttime="20200826 19:24:15.107" endtime="20200826 19:24:15.107"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.107" level="INFO">${e-InsuranceNumber} = -</msg>
+<status status="PASS" starttime="20200826 19:24:15.106" endtime="20200826 19:24:15.107"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>18</arg>
+</arguments>
+<assign>
+<var>${PolicyIssuanceDateLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.108" level="INFO">//label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.108" level="INFO">${celldata} = //label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.108" endtime="20200826 19:24:15.108"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.109" level="INFO">${PolicyIssuanceDateLocator} = //label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.107" endtime="20200826 19:24:15.109"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>19</arg>
+</arguments>
+<assign>
+<var>${PolicyIssuanceDate}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.109" level="INFO">December 15th 2008</msg>
+<msg timestamp="20200826 19:24:15.109" level="INFO">${celldata} = December 15th 2008</msg>
+<status status="PASS" starttime="20200826 19:24:15.109" endtime="20200826 19:24:15.109"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.110" level="INFO">${PolicyIssuanceDate} = December 15th 2008</msg>
+<status status="PASS" starttime="20200826 19:24:15.109" endtime="20200826 19:24:15.110"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${PremiumPaymentTermLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.110" level="INFO">//label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.110" level="INFO">${celldata} = //label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.110" endtime="20200826 19:24:15.110"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.110" level="INFO">${PremiumPaymentTermLocator} = //label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.110" endtime="20200826 19:24:15.110"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>21</arg>
+</arguments>
+<assign>
+<var>${PremiumPaymentTerm}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.111" level="INFO">25</msg>
+<msg timestamp="20200826 19:24:15.111" level="INFO">${celldata} = 25</msg>
+<status status="PASS" starttime="20200826 19:24:15.111" endtime="20200826 19:24:15.111"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.111" level="INFO">${PremiumPaymentTerm} = 25</msg>
+<status status="PASS" starttime="20200826 19:24:15.111" endtime="20200826 19:24:15.112"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>22</arg>
+</arguments>
+<assign>
+<var>${PolicyTermLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.113" level="INFO">//label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.113" level="INFO">${celldata} = //label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.112" endtime="20200826 19:24:15.113"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.113" level="INFO">${PolicyTermLocator} = //label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.112" endtime="20200826 19:24:15.113"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>23</arg>
+</arguments>
+<assign>
+<var>${PolicyTerm}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.114" level="INFO">25</msg>
+<msg timestamp="20200826 19:24:15.114" level="INFO">${celldata} = 25</msg>
+<status status="PASS" starttime="20200826 19:24:15.114" endtime="20200826 19:24:15.114"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.114" level="INFO">${PolicyTerm} = 25</msg>
+<status status="PASS" starttime="20200826 19:24:15.113" endtime="20200826 19:24:15.114"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>24</arg>
+</arguments>
+<assign>
+<var>${MaturityDateLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.115" level="INFO">//label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.115" level="INFO">${celldata} = //label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.115" endtime="20200826 19:24:15.115"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.115" level="INFO">${MaturityDateLocator} = //label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.114" endtime="20200826 19:24:15.115"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>25</arg>
+</arguments>
+<assign>
+<var>${MaturityDate}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.116" level="INFO">December 15th 2033</msg>
+<msg timestamp="20200826 19:24:15.116" level="INFO">${celldata} = December 15th 2033</msg>
+<status status="PASS" starttime="20200826 19:24:15.116" endtime="20200826 19:24:15.116"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.116" level="INFO">${MaturityDate} = December 15th 2033</msg>
+<status status="PASS" starttime="20200826 19:24:15.115" endtime="20200826 19:24:15.116"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>26</arg>
+</arguments>
+<assign>
+<var>${PayorNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.117" level="INFO">//label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.117" level="INFO">${celldata} = //label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.117" endtime="20200826 19:24:15.117"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.117" level="INFO">${PayorNameLocator} = //label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.116" endtime="20200826 19:24:15.117"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>27</arg>
+</arguments>
+<assign>
+<var>${PayorName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.118" level="INFO">MR. CHETAN GHARAT</msg>
+<msg timestamp="20200826 19:24:15.118" level="INFO">${celldata} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.118" endtime="20200826 19:24:15.118"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.118" level="INFO">${PayorName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.117" endtime="20200826 19:24:15.118"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>28</arg>
+</arguments>
+<assign>
+<var>${InsuredNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.119" level="INFO">//label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.119" level="INFO">${celldata} = //label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.118" endtime="20200826 19:24:15.119"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.119" level="INFO">${InsuredNameLocator} = //label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.118" endtime="20200826 19:24:15.119"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>29</arg>
+</arguments>
+<assign>
+<var>${InsuredName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.120" level="INFO">MR. CHETAN GHARAT</msg>
+<msg timestamp="20200826 19:24:15.120" level="INFO">${celldata} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.119" endtime="20200826 19:24:15.120"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.120" level="INFO">${InsuredName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.119" endtime="20200826 19:24:15.120"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>30</arg>
+</arguments>
+<assign>
+<var>${JointLifeNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.120" level="INFO">//label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.121" level="INFO">${celldata} = //label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.120" endtime="20200826 19:24:15.121"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.121" level="INFO">${JointLifeNameLocator} = //label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.120" endtime="20200826 19:24:15.121"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>31</arg>
+</arguments>
+<assign>
+<var>${JointLifeName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.121" level="INFO">-</msg>
+<msg timestamp="20200826 19:24:15.121" level="INFO">${celldata} = -</msg>
+<status status="PASS" starttime="20200826 19:24:15.121" endtime="20200826 19:24:15.122"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.122" level="INFO">${JointLifeName} = -</msg>
+<status status="PASS" starttime="20200826 19:24:15.121" endtime="20200826 19:24:15.122"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>32</arg>
+</arguments>
+<assign>
+<var>${RelatioshipLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.122" level="INFO">//label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.122" level="INFO">${celldata} = //label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.122" endtime="20200826 19:24:15.122"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.123" level="INFO">${RelatioshipLocator} = //label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.122" endtime="20200826 19:24:15.123"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>33</arg>
+</arguments>
+<assign>
+<var>${Relationship}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.123" level="INFO">SAME</msg>
+<msg timestamp="20200826 19:24:15.123" level="INFO">${celldata} = SAME</msg>
+<status status="PASS" starttime="20200826 19:24:15.123" endtime="20200826 19:24:15.123"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.124" level="INFO">${Relationship} = SAME</msg>
+<status status="PASS" starttime="20200826 19:24:15.123" endtime="20200826 19:24:15.124"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>34</arg>
+</arguments>
+<assign>
+<var>${BaseSumAssuredLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.124" level="INFO">//label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.124" level="INFO">${celldata} = //label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.124" endtime="20200826 19:24:15.125"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.125" level="INFO">${BaseSumAssuredLocator} = //label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.124" endtime="20200826 19:24:15.125"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>35</arg>
+</arguments>
+<assign>
+<var>${BaseSumAssured}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.125" level="INFO">₹ 40575.00</msg>
+<msg timestamp="20200826 19:24:15.125" level="INFO">${celldata} = ₹ 40575.00</msg>
+<status status="PASS" starttime="20200826 19:24:15.125" endtime="20200826 19:24:15.125"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.125" level="INFO">${BaseSumAssured} = ₹ 40575.00</msg>
+<status status="PASS" starttime="20200826 19:24:15.125" endtime="20200826 19:24:15.125"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>36</arg>
+</arguments>
+<assign>
+<var>${RiderSumAssuredLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.126" level="INFO">//label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.126" level="INFO">${celldata} = //label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.126" endtime="20200826 19:24:15.126"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.126" level="INFO">${RiderSumAssuredLocator} = //label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.126" endtime="20200826 19:24:15.126"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>37</arg>
+</arguments>
+<assign>
+<var>${RiderSumAssured}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.127" level="INFO">₹ 5000000.00</msg>
+<msg timestamp="20200826 19:24:15.127" level="INFO">${celldata} = ₹ 5000000.00</msg>
+<status status="PASS" starttime="20200826 19:24:15.127" endtime="20200826 19:24:15.127"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.127" level="INFO">${RiderSumAssured} = ₹ 5000000.00</msg>
+<status status="PASS" starttime="20200826 19:24:15.127" endtime="20200826 19:24:15.127"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>38</arg>
+</arguments>
+<assign>
+<var>${JointLifeSumAssuredLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.128" level="INFO">//label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:24:15.128" level="INFO">${celldata} = //label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.128" endtime="20200826 19:24:15.128"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.128" level="INFO">${JointLifeSumAssuredLocator} = //label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.127" endtime="20200826 19:24:15.128"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>39</arg>
+</arguments>
+<assign>
+<var>${JointLifeSumAssured}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:24:15.129" level="INFO">300000</msg>
+<msg timestamp="20200826 19:24:15.129" level="INFO">${celldata} = 300000</msg>
+<status status="PASS" starttime="20200826 19:24:15.129" endtime="20200826 19:24:15.129"></status>
+</kw>
+<msg timestamp="20200826 19:24:15.129" level="INFO">${JointLifeSumAssured} = 300000</msg>
+<status status="PASS" starttime="20200826 19:24:15.128" endtime="20200826 19:24:15.129"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==3</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:24:15.129" endtime="20200826 19:24:15.130"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.130" level="INFO">${SiteUrl} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:24:15.130" endtime="20200826 19:24:15.130"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.130" level="INFO">${Browser} = chrome</msg>
+<status status="PASS" starttime="20200826 19:24:15.130" endtime="20200826 19:24:15.130"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${UserID}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.131" level="INFO">${UserID} = Demouser</msg>
+<status status="PASS" starttime="20200826 19:24:15.130" endtime="20200826 19:24:15.131"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.131" level="INFO">${Password} = pass@1234</msg>
+<status status="PASS" starttime="20200826 19:24:15.131" endtime="20200826 19:24:15.131"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ViewDetailsLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.131" level="INFO">${ViewDetailsLocator} = //li[1]//div[1]//div[2]//div[1]//button[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.131" endtime="20200826 19:24:15.131"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PolicyNumberLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.132" level="INFO">${PolicyNumberLocator} = //label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.131" endtime="20200826 19:24:15.132"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PolicyNumber}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.132" level="INFO">${PolicyNumber} = 002270891</msg>
+<status status="PASS" starttime="20200826 19:24:15.132" endtime="20200826 19:24:15.132"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${OwnerNameLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.132" level="INFO">${OwnerNameLocator} = //label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.132" endtime="20200826 19:24:15.132"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${OwnerName}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.133" level="INFO">${OwnerName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.133" endtime="20200826 19:24:15.133"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ClientIDLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.133" level="INFO">${ClientIDLocator} = //label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.133" endtime="20200826 19:24:15.133"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ClientID}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.133" level="INFO">${ClientID} = 4623681143</msg>
+<status status="PASS" starttime="20200826 19:24:15.133" endtime="20200826 19:24:15.134"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PlanNameLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.134" level="INFO">${PlanNameLocator} = //label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.134" endtime="20200826 19:24:15.134"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PlanName}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.134" level="INFO">${PlanName} = Universal Life Insurance Coverage</msg>
+<status status="PASS" starttime="20200826 19:24:15.134" endtime="20200826 19:24:15.134"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PurposeOfInsuranceLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.135" level="INFO">${PurposeOfInsuranceLocator} = //label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.134" endtime="20200826 19:24:15.135"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PurposeOfInsurance}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.135" level="INFO">${PurposeOfInsurance} = NA</msg>
+<status status="PASS" starttime="20200826 19:24:15.135" endtime="20200826 19:24:15.135"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${e-InsuranceNumberLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.135" level="INFO">${e-InsuranceNumberLocator} = //label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.135" endtime="20200826 19:24:15.135"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${e-InsuranceNumber}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.136" level="INFO">${e-InsuranceNumber} = -</msg>
+<status status="PASS" starttime="20200826 19:24:15.135" endtime="20200826 19:24:15.136"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PolicyIssuanceDateLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.136" level="INFO">${PolicyIssuanceDateLocator} = //label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.136" endtime="20200826 19:24:15.136"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PolicyIssuanceDate}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.136" level="INFO">${PolicyIssuanceDate} = December 15th 2008</msg>
+<status status="PASS" starttime="20200826 19:24:15.136" endtime="20200826 19:24:15.136"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PremiumPaymentTermLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.137" level="INFO">${PremiumPaymentTermLocator} = //label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.136" endtime="20200826 19:24:15.137"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PremiumPaymentTerm}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.137" level="INFO">${PremiumPaymentTerm} = 25</msg>
+<status status="PASS" starttime="20200826 19:24:15.137" endtime="20200826 19:24:15.137"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PolicyTermLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.137" level="INFO">${PolicyTermLocator} = //label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.137" endtime="20200826 19:24:15.137"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PolicyTerm}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.138" level="INFO">${PolicyTerm} = 25</msg>
+<status status="PASS" starttime="20200826 19:24:15.138" endtime="20200826 19:24:15.138"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${MaturityDateLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.138" level="INFO">${MaturityDateLocator} = //label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.138" endtime="20200826 19:24:15.138"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${MaturityDate}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.138" level="INFO">${MaturityDate} = December 15th 2033</msg>
+<status status="PASS" starttime="20200826 19:24:15.138" endtime="20200826 19:24:15.138"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PayorNameLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.139" level="INFO">${PayorNameLocator} = //label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.139" endtime="20200826 19:24:15.139"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PayorName}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.139" level="INFO">${PayorName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.139" endtime="20200826 19:24:15.139"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${InsuredNameLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.139" level="INFO">${InsuredNameLocator} = //label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.139" endtime="20200826 19:24:15.140"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${InsuredName}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.140" level="INFO">${InsuredName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:24:15.140" endtime="20200826 19:24:15.140"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${JointLifeNameLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.140" level="INFO">${JointLifeNameLocator} = //label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.140" endtime="20200826 19:24:15.140"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${JointLifeName}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.141" level="INFO">${JointLifeName} = -</msg>
+<status status="PASS" starttime="20200826 19:24:15.140" endtime="20200826 19:24:15.141"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${RelatioshipLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.141" level="INFO">${RelatioshipLocator} = //label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.141" endtime="20200826 19:24:15.141"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Relationship}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.141" level="INFO">${Relationship} = SAME</msg>
+<status status="PASS" starttime="20200826 19:24:15.141" endtime="20200826 19:24:15.141"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${BaseSumAssuredLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.142" level="INFO">${BaseSumAssuredLocator} = //label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.141" endtime="20200826 19:24:15.142"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${BaseSumAssured}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.142" level="INFO">${BaseSumAssured} = ₹ 40575.00</msg>
+<status status="PASS" starttime="20200826 19:24:15.142" endtime="20200826 19:24:15.142"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${RiderSumAssuredLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.143" level="INFO">${RiderSumAssuredLocator} = //label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.143" endtime="20200826 19:24:15.143"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${RiderSumAssured}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.143" level="INFO">${RiderSumAssured} = ₹ 5000000.00</msg>
+<status status="PASS" starttime="20200826 19:24:15.143" endtime="20200826 19:24:15.143"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${JointLifeSumAssuredLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.144" level="INFO">${JointLifeSumAssuredLocator} = //label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:24:15.143" endtime="20200826 19:24:15.144"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${JointLifeSumAssured}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.144" level="INFO">${JointLifeSumAssured} = 300000</msg>
+<status status="PASS" starttime="20200826 19:24:15.144" endtime="20200826 19:24:15.144"></status>
+</kw>
+<kw name="Open My Browser" library="LoginKeywords">
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:15.145" level="INFO">Opening browser 'chrome' to base url 'http://10.157.17.27/'.</msg>
+<status status="PASS" starttime="20200826 19:24:15.144" endtime="20200826 19:24:28.123"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200826 19:24:28.123" endtime="20200826 19:24:28.236"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:15.144" endtime="20200826 19:24:28.236"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:24:28.236" endtime="20200826 19:24:28.236"></status>
+</kw>
+<kw name="Enter UserID" library="LoginKeywords">
+<arguments>
+<arg>${UserID}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UserID_TextBox}</arg>
+<arg>${UserID}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:28.237" level="INFO">Typing text 'Demouser' into text field 'name:userId'.</msg>
+<status status="PASS" starttime="20200826 19:24:28.237" endtime="20200826 19:24:31.426"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:28.237" endtime="20200826 19:24:31.427"></status>
+</kw>
+<kw name="Scroll page till checkuserID" library="LoginKeywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Scroll_Page_till_ChechuserID}</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:24:31.429" endtime="20200826 19:24:33.748"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:31.427" endtime="20200826 19:24:33.749"></status>
+</kw>
+<kw name="Click CheckUserID" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${CheckUserID_Button}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:33.751" level="INFO">Clicking button 'xpath://button[contains(text(),'Check User ID')]'.</msg>
+<status status="PASS" starttime="20200826 19:24:33.751" endtime="20200826 19:24:38.904"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:33.749" endtime="20200826 19:24:38.904"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:24:38.904" endtime="20200826 19:24:39.907"></status>
+</kw>
+<kw name="Enter valid password" library="LoginKeywords">
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_TextBox}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:39.909" level="INFO">Typing text 'pass@1234' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20200826 19:24:39.909" endtime="20200826 19:24:43.443"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:39.907" endtime="20200826 19:24:43.444"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:24:43.444" endtime="20200826 19:24:43.445"></status>
+</kw>
+<kw name="Click Submit" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit_Button}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:43.447" level="INFO">Clicking button 'xpath://button[contains(text(),'Submit')]'.</msg>
+<status status="PASS" starttime="20200826 19:24:43.447" endtime="20200826 19:24:48.604"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:43.445" endtime="20200826 19:24:48.604"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>25seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:24:48.605" endtime="20200826 19:24:49.608"></status>
+</kw>
+<kw name="Click popUp cross icon" library="LoginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PopUp_SkipLink}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:49.614" level="INFO">Clicking element '//button[@class='btn btn-link']'.</msg>
+<status status="PASS" starttime="20200826 19:24:49.610" endtime="20200826 19:24:51.685"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:49.609" endtime="20200826 19:24:51.685"></status>
+</kw>
+<kw name="Click policy details icon" library="DashboardScreen">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PolicyDetails_Icon}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:51.687" level="INFO">Clicking element 'xpath://span[@class='icon icon-policy-details']'.</msg>
+<status status="PASS" starttime="20200826 19:24:51.686" endtime="20200826 19:24:53.913"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:51.686" endtime="20200826 19:24:53.914"></status>
+</kw>
+<kw name="Click Ulip link" library="PolicyListingScreen">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Ulip_Link}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:53.917" level="INFO">Clicking element 'xpath://a[contains(text(),'ULIP Plans')]'.</msg>
+<status status="PASS" starttime="20200826 19:24:53.916" endtime="20200826 19:24:56.089"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:53.914" endtime="20200826 19:24:56.090"></status>
+</kw>
+<kw name="Click view details button" library="PolicyListingScreen">
+<arguments>
+<arg>${ViewDetailsLocator}</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${ViewDetailsLocator}</arg>
+</arguments>
+<msg timestamp="20200826 19:24:56.094" level="INFO">Clicking button '//li[1]//div[1]//div[2]//div[1]//button[1]'.</msg>
+<status status="PASS" starttime="20200826 19:24:56.093" endtime="20200826 19:25:01.302"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:56.091" endtime="20200826 19:25:01.302"></status>
+</kw>
+<kw name="Policy details" library="PolicyListingScreen">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MissingDetails}</arg>
+</arguments>
+<assign>
+<var>${items}</var>
+</assign>
+<msg timestamp="20200826 19:25:03.351" level="INFO">${items} = </msg>
+<status status="PASS" starttime="20200826 19:25:01.303" endtime="20200826 19:25:03.352"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${items}"=="Missing details"</arg>
+<arg>Cancel PopUp</arg>
+<arg>ELSE</arg>
+<arg>Scroll elements</arg>
+</arguments>
+<kw name="Scroll elements" library="PolicyListingScreen">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Scroll_Page_till_NomineeDetails}</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:25:03.355" endtime="20200826 19:25:05.668"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:03.354" endtime="20200826 19:25:05.669"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:03.352" endtime="20200826 19:25:05.669"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:01.302" endtime="20200826 19:25:05.669"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:25:05.670" endtime="20200826 19:25:06.674"></status>
+</kw>
+<kw name="Click on plan details" library="PolicyDetailsScreen">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Plandetail}</arg>
+</arguments>
+<msg timestamp="20200826 19:25:08.776" level="INFO">Element 'xpath://body/div[@id='root']/div[@class='container-fluid refContainer']/div[@class='content-wrapper']/div[@class='lytPolicyDetail']/div[@class='bs-section']/div[@class='sec__cont']/div[@class='lyt-accordion']/div[1]/div[1]/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20200826 19:25:06.675" endtime="20200826 19:25:08.776"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Plandetail}</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:25:08.776" endtime="20200826 19:25:11.829"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Plandetail}</arg>
+</arguments>
+<msg timestamp="20200826 19:25:11.830" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[@class='container-fluid refContainer']/div[@class='content-wrapper']/div[@class='lytPolicyDetail']/div[@class='bs-section']/div[@class='sec__cont']/div[@class='lyt-accordion']/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20200826 19:25:11.829" endtime="20200826 19:25:13.922"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:06.674" endtime="20200826 19:25:13.922"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:25:13.924" endtime="20200826 19:25:13.924"></status>
+</kw>
+<kw name="Plan Details Verification" library="PolicyDetailsScreen">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PolicyNumberLocator}</arg>
+</arguments>
+<assign>
+<var>${PoNum}</var>
+</assign>
+<msg timestamp="20200826 19:25:15.982" level="INFO">${PoNum} = 002270891</msg>
+<status status="PASS" starttime="20200826 19:25:13.925" endtime="20200826 19:25:15.982"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${PoNum}"=="${PolicyNumber}"</arg>
+<arg>Verify Policy owner name</arg>
+</arguments>
+<kw name="Verify Policy owner name" library="PolicyDetailsScreen">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${OwnerNameLocator}</arg>
+</arguments>
+<assign>
+<var>${OwName}</var>
+</assign>
+<msg timestamp="20200826 19:25:18.041" level="INFO">${OwName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:25:15.985" endtime="20200826 19:25:18.041"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${OwName}"=="${OwnerName}"</arg>
+<arg>Verify CLientID</arg>
+</arguments>
+<kw name="Verify CLientID" library="PolicyDetailsScreen">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ClientIDLocator}</arg>
+</arguments>
+<assign>
+<var>${CID}</var>
+</assign>
+<msg timestamp="20200826 19:25:20.112" level="INFO">${CID} = 4623681143</msg>
+<status status="PASS" starttime="20200826 19:25:18.042" endtime="20200826 19:25:20.112"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${CID}"=="${ClientID}"</arg>
+<arg>Verify PlanName</arg>
+</arguments>
+<kw name="Verify PlanName" library="PolicyDetailsScreen">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PlanNameLocator}</arg>
+</arguments>
+<assign>
+<var>${Pname}</var>
+</assign>
+<msg timestamp="20200826 19:25:22.160" level="INFO">${Pname} = Dream Plan- FAV Option 100%</msg>
+<status status="PASS" starttime="20200826 19:25:20.114" endtime="20200826 19:25:22.160"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Pname}"=="${PlanName}"</arg>
+<arg>Verify PurposeOfInsurance</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:25:22.160" endtime="20200826 19:25:22.161"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:20.113" endtime="20200826 19:25:22.162"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:20.112" endtime="20200826 19:25:22.162"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:18.041" endtime="20200826 19:25:22.162"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:18.041" endtime="20200826 19:25:22.162"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:15.984" endtime="20200826 19:25:22.162"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:15.983" endtime="20200826 19:25:22.163"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:13.924" endtime="20200826 19:25:22.163"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200826 19:25:22.163" endtime="20200826 19:25:22.164"></status>
+</kw>
+<kw name="Capture plan details screenshot" library="PolicyDetailsScreen">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PolicyNumberLocator}</arg>
+</arguments>
+<assign>
+<var>${PNumber}</var>
+</assign>
+<msg timestamp="20200826 19:25:24.200" level="INFO">${PNumber} = 002270891</msg>
+<status status="PASS" starttime="20200826 19:25:22.164" endtime="20200826 19:25:24.200"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${PNumber}"=="002270891"</arg>
+<arg>PN002270891</arg>
+<arg>ELSE IF</arg>
+<arg>"${PNumber}"=="003689330"</arg>
+<arg>PN003689330</arg>
+<arg>ELSE IF</arg>
+<arg>"${PNumber}"=="008029522"</arg>
+<arg>PN008029522</arg>
+<arg>ELSE IF</arg>
+<arg>"${PNumber}"=="002243532"</arg>
+<arg>PN002243532</arg>
+</arguments>
+<kw name="PN002270891" library="PolicyDetailsScreen">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>P_Num-002270891.png</arg>
+</arguments>
+<msg timestamp="20200826 19:25:25.575" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="P_Num-002270891.png"&gt;&lt;img src="P_Num-002270891.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200826 19:25:24.204" endtime="20200826 19:25:25.576"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:24.202" endtime="20200826 19:25:25.576"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:24.201" endtime="20200826 19:25:25.576"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:22.164" endtime="20200826 19:25:25.577"></status>
+</kw>
+<kw name="Close My Browsers" library="LoginKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200826 19:25:25.578" endtime="20200826 19:25:28.815"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:25.577" endtime="20200826 19:25:28.816"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:15.089" endtime="20200826 19:25:28.816"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${SiteUrl}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.818" level="INFO">http://10.157.17.27/</msg>
+<msg timestamp="20200826 19:25:28.818" level="INFO">${celldata} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:25:28.817" endtime="20200826 19:25:28.818"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.819" level="INFO">${SiteUrl} = http://10.157.17.27/</msg>
+<status status="PASS" starttime="20200826 19:25:28.816" endtime="20200826 19:25:28.819"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${Browser}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.821" level="INFO">chrome</msg>
+<msg timestamp="20200826 19:25:28.821" level="INFO">${celldata} = chrome</msg>
+<status status="PASS" starttime="20200826 19:25:28.820" endtime="20200826 19:25:28.821"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.821" level="INFO">${Browser} = chrome</msg>
+<status status="PASS" starttime="20200826 19:25:28.819" endtime="20200826 19:25:28.821"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${UserID}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.823" level="INFO">uatdemo1</msg>
+<msg timestamp="20200826 19:25:28.823" level="INFO">${celldata} = uatdemo1</msg>
+<status status="PASS" starttime="20200826 19:25:28.822" endtime="20200826 19:25:28.823"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.824" level="INFO">${UserID} = uatdemo1</msg>
+<status status="PASS" starttime="20200826 19:25:28.822" endtime="20200826 19:25:28.824"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${Password}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.825" level="INFO">pass@1234</msg>
+<msg timestamp="20200826 19:25:28.826" level="INFO">${celldata} = pass@1234</msg>
+<status status="PASS" starttime="20200826 19:25:28.825" endtime="20200826 19:25:28.826"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.826" level="INFO">${Password} = pass@1234</msg>
+<status status="PASS" starttime="20200826 19:25:28.824" endtime="20200826 19:25:28.826"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${ViewDetailsLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.828" level="INFO">//li[2]//div[1]//div[2]//div[1]//button[1]</msg>
+<msg timestamp="20200826 19:25:28.829" level="INFO">${celldata} = //li[2]//div[1]//div[2]//div[1]//button[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.827" endtime="20200826 19:25:28.829"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.829" level="INFO">${ViewDetailsLocator} = //li[2]//div[1]//div[2]//div[1]//button[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.827" endtime="20200826 19:25:28.829"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>6</arg>
+</arguments>
+<assign>
+<var>${PolicyNumberLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.831" level="INFO">//label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.831" level="INFO">${celldata} = //label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.830" endtime="20200826 19:25:28.831"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.832" level="INFO">${PolicyNumberLocator} = //label[contains(text(),'Policy Number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.829" endtime="20200826 19:25:28.832"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${PolicyNumber}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.833" level="INFO">003689330</msg>
+<msg timestamp="20200826 19:25:28.833" level="INFO">${celldata} = 003689330</msg>
+<status status="PASS" starttime="20200826 19:25:28.833" endtime="20200826 19:25:28.833"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.834" level="INFO">${PolicyNumber} = 003689330</msg>
+<status status="PASS" starttime="20200826 19:25:28.832" endtime="20200826 19:25:28.834"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${OwnerNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.835" level="INFO">//label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.836" level="INFO">${celldata} = //label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.835" endtime="20200826 19:25:28.836"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.836" level="INFO">${OwnerNameLocator} = //label[contains(text(),'Policy Owner Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.834" endtime="20200826 19:25:28.836"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>9</arg>
+</arguments>
+<assign>
+<var>${OwnerName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.838" level="INFO">MR. CHETAN GHARAT</msg>
+<msg timestamp="20200826 19:25:28.838" level="INFO">${celldata} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:25:28.837" endtime="20200826 19:25:28.838"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.838" level="INFO">${OwnerName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:25:28.836" endtime="20200826 19:25:28.839"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>10</arg>
+</arguments>
+<assign>
+<var>${ClientIDLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.840" level="INFO">//label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.840" level="INFO">${celldata} = //label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.839" endtime="20200826 19:25:28.840"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.841" level="INFO">${ClientIDLocator} = //label[contains(text(),'Client ID')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.839" endtime="20200826 19:25:28.841"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>11</arg>
+</arguments>
+<assign>
+<var>${ClientID}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.842" level="INFO">4623681143</msg>
+<msg timestamp="20200826 19:25:28.843" level="INFO">${celldata} = 4623681143</msg>
+<status status="PASS" starttime="20200826 19:25:28.842" endtime="20200826 19:25:28.843"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.843" level="INFO">${ClientID} = 4623681143</msg>
+<status status="PASS" starttime="20200826 19:25:28.841" endtime="20200826 19:25:28.843"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${PlanNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.845" level="INFO">//label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.845" level="INFO">${celldata} = //label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.844" endtime="20200826 19:25:28.845"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.845" level="INFO">${PlanNameLocator} = //label[contains(text(),'Plan name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.843" endtime="20200826 19:25:28.845"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>13</arg>
+</arguments>
+<assign>
+<var>${PlanName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.847" level="INFO">Universal Life Insurance Coverage</msg>
+<msg timestamp="20200826 19:25:28.847" level="INFO">${celldata} = Universal Life Insurance Coverage</msg>
+<status status="PASS" starttime="20200826 19:25:28.846" endtime="20200826 19:25:28.847"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.847" level="INFO">${PlanName} = Universal Life Insurance Coverage</msg>
+<status status="PASS" starttime="20200826 19:25:28.846" endtime="20200826 19:25:28.847"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>14</arg>
+</arguments>
+<assign>
+<var>${PurposeOfInsuranceLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.848" level="INFO">//label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.849" level="INFO">${celldata} = //label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.848" endtime="20200826 19:25:28.849"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.849" level="INFO">${PurposeOfInsuranceLocator} = //label[contains(text(),'Purpose of Insurance')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.847" endtime="20200826 19:25:28.849"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>15</arg>
+</arguments>
+<assign>
+<var>${PurposeOfInsurance}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.850" level="INFO">Family Protection</msg>
+<msg timestamp="20200826 19:25:28.850" level="INFO">${celldata} = Family Protection</msg>
+<status status="PASS" starttime="20200826 19:25:28.850" endtime="20200826 19:25:28.850"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.851" level="INFO">${PurposeOfInsurance} = Family Protection</msg>
+<status status="PASS" starttime="20200826 19:25:28.849" endtime="20200826 19:25:28.851"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>16</arg>
+</arguments>
+<assign>
+<var>${e-InsuranceNumberLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.852" level="INFO">//label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.852" level="INFO">${celldata} = //label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.851" endtime="20200826 19:25:28.852"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.852" level="INFO">${e-InsuranceNumberLocator} = //label[contains(text(),'e-Insurance number')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.851" endtime="20200826 19:25:28.852"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>17</arg>
+</arguments>
+<assign>
+<var>${e-InsuranceNumber}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.853" level="INFO">-</msg>
+<msg timestamp="20200826 19:25:28.853" level="INFO">${celldata} = -</msg>
+<status status="PASS" starttime="20200826 19:25:28.853" endtime="20200826 19:25:28.853"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.854" level="INFO">${e-InsuranceNumber} = -</msg>
+<status status="PASS" starttime="20200826 19:25:28.852" endtime="20200826 19:25:28.854"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>18</arg>
+</arguments>
+<assign>
+<var>${PolicyIssuanceDateLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.855" level="INFO">//label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.855" level="INFO">${celldata} = //label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.854" endtime="20200826 19:25:28.855"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.855" level="INFO">${PolicyIssuanceDateLocator} = //label[contains(text(),'Policy Issuance Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.854" endtime="20200826 19:25:28.855"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>19</arg>
+</arguments>
+<assign>
+<var>${PolicyIssuanceDate}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.856" level="INFO">December 28th 2009</msg>
+<msg timestamp="20200826 19:25:28.856" level="INFO">${celldata} = December 28th 2009</msg>
+<status status="PASS" starttime="20200826 19:25:28.856" endtime="20200826 19:25:28.856"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.856" level="INFO">${PolicyIssuanceDate} = December 28th 2009</msg>
+<status status="PASS" starttime="20200826 19:25:28.855" endtime="20200826 19:25:28.856"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${PremiumPaymentTermLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.857" level="INFO">//label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.857" level="INFO">${celldata} = //label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.857" endtime="20200826 19:25:28.857"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.858" level="INFO">${PremiumPaymentTermLocator} = //label[contains(text(),'Premium Payment Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.856" endtime="20200826 19:25:28.858"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>21</arg>
+</arguments>
+<assign>
+<var>${PremiumPaymentTerm}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.858" level="INFO">20</msg>
+<msg timestamp="20200826 19:25:28.859" level="INFO">${celldata} = 20</msg>
+<status status="PASS" starttime="20200826 19:25:28.858" endtime="20200826 19:25:28.859"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.859" level="INFO">${PremiumPaymentTerm} = 20</msg>
+<status status="PASS" starttime="20200826 19:25:28.858" endtime="20200826 19:25:28.859"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>22</arg>
+</arguments>
+<assign>
+<var>${PolicyTermLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.860" level="INFO">//label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.860" level="INFO">${celldata} = //label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.859" endtime="20200826 19:25:28.860"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.860" level="INFO">${PolicyTermLocator} = //label[contains(text(),'Policy Term')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.859" endtime="20200826 19:25:28.860"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>23</arg>
+</arguments>
+<assign>
+<var>${PolicyTerm}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.861" level="INFO">20</msg>
+<msg timestamp="20200826 19:25:28.861" level="INFO">${celldata} = 20</msg>
+<status status="PASS" starttime="20200826 19:25:28.861" endtime="20200826 19:25:28.861"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.861" level="INFO">${PolicyTerm} = 20</msg>
+<status status="PASS" starttime="20200826 19:25:28.860" endtime="20200826 19:25:28.861"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>24</arg>
+</arguments>
+<assign>
+<var>${MaturityDateLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.862" level="INFO">//label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.862" level="INFO">${celldata} = //label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.862" endtime="20200826 19:25:28.862"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.862" level="INFO">${MaturityDateLocator} = //label[contains(text(),'Maturity Date')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.861" endtime="20200826 19:25:28.862"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>25</arg>
+</arguments>
+<assign>
+<var>${MaturityDate}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.863" level="INFO">December 28th 2029</msg>
+<msg timestamp="20200826 19:25:28.863" level="INFO">${celldata} = December 28th 2029</msg>
+<status status="PASS" starttime="20200826 19:25:28.863" endtime="20200826 19:25:28.863"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.863" level="INFO">${MaturityDate} = December 28th 2029</msg>
+<status status="PASS" starttime="20200826 19:25:28.862" endtime="20200826 19:25:28.863"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>26</arg>
+</arguments>
+<assign>
+<var>${PayorNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.864" level="INFO">//label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.864" level="INFO">${celldata} = //label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.864" endtime="20200826 19:25:28.864"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.864" level="INFO">${PayorNameLocator} = //label[contains(text(),'Payor name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.863" endtime="20200826 19:25:28.864"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>27</arg>
+</arguments>
+<assign>
+<var>${PayorName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.865" level="INFO">MR. CHETAN GHARAT</msg>
+<msg timestamp="20200826 19:25:28.865" level="INFO">${celldata} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:25:28.865" endtime="20200826 19:25:28.865"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.865" level="INFO">${PayorName} = MR. CHETAN GHARAT</msg>
+<status status="PASS" starttime="20200826 19:25:28.864" endtime="20200826 19:25:28.865"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>28</arg>
+</arguments>
+<assign>
+<var>${InsuredNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.866" level="INFO">//label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.866" level="INFO">${celldata} = //label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.866" endtime="20200826 19:25:28.866"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.866" level="INFO">${InsuredNameLocator} = //label[contains(text(),'Insured name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.865" endtime="20200826 19:25:28.866"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>29</arg>
+</arguments>
+<assign>
+<var>${InsuredName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.867" level="INFO">MR. RAMACHANDRA SEKHARA RAO MANDULA</msg>
+<msg timestamp="20200826 19:25:28.867" level="INFO">${celldata} = MR. RAMACHANDRA SEKHARA RAO MANDULA</msg>
+<status status="PASS" starttime="20200826 19:25:28.867" endtime="20200826 19:25:28.867"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.867" level="INFO">${InsuredName} = MR. RAMACHANDRA SEKHARA RAO MANDULA</msg>
+<status status="PASS" starttime="20200826 19:25:28.866" endtime="20200826 19:25:28.867"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>30</arg>
+</arguments>
+<assign>
+<var>${JointLifeNameLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.868" level="INFO">//label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.868" level="INFO">${celldata} = //label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.868" endtime="20200826 19:25:28.868"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.868" level="INFO">${JointLifeNameLocator} = //label[contains(text(),'Joint Life Name')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.867" endtime="20200826 19:25:28.868"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>31</arg>
+</arguments>
+<assign>
+<var>${JointLifeName}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.869" level="INFO">-</msg>
+<msg timestamp="20200826 19:25:28.869" level="INFO">${celldata} = -</msg>
+<status status="PASS" starttime="20200826 19:25:28.868" endtime="20200826 19:25:28.869"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.869" level="INFO">${JointLifeName} = -</msg>
+<status status="PASS" starttime="20200826 19:25:28.868" endtime="20200826 19:25:28.869"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>32</arg>
+</arguments>
+<assign>
+<var>${RelatioshipLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.870" level="INFO">//label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.870" level="INFO">${celldata} = //label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.869" endtime="20200826 19:25:28.870"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.870" level="INFO">${RelatioshipLocator} = //label[contains(text(),'Policy Owner Relation with Insured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.869" endtime="20200826 19:25:28.870"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>33</arg>
+</arguments>
+<assign>
+<var>${Relationship}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.871" level="INFO">SAME</msg>
+<msg timestamp="20200826 19:25:28.871" level="INFO">${celldata} = SAME</msg>
+<status status="PASS" starttime="20200826 19:25:28.870" endtime="20200826 19:25:28.871"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.871" level="INFO">${Relationship} = SAME</msg>
+<status status="PASS" starttime="20200826 19:25:28.870" endtime="20200826 19:25:28.871"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>34</arg>
+</arguments>
+<assign>
+<var>${BaseSumAssuredLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.872" level="INFO">//label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.872" level="INFO">${celldata} = //label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.871" endtime="20200826 19:25:28.872"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.872" level="INFO">${BaseSumAssuredLocator} = //label[contains(text(),'Base sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.871" endtime="20200826 19:25:28.872"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>35</arg>
+</arguments>
+<assign>
+<var>${BaseSumAssured}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.872" level="INFO">₹ 168000.00</msg>
+<msg timestamp="20200826 19:25:28.872" level="INFO">${celldata} = ₹ 168000.00</msg>
+<status status="PASS" starttime="20200826 19:25:28.872" endtime="20200826 19:25:28.873"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.873" level="INFO">${BaseSumAssured} = ₹ 168000.00</msg>
+<status status="PASS" starttime="20200826 19:25:28.872" endtime="20200826 19:25:28.873"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>36</arg>
+</arguments>
+<assign>
+<var>${RiderSumAssuredLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.873" level="INFO">//label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.873" level="INFO">${celldata} = //label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.873" endtime="20200826 19:25:28.873"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.874" level="INFO">${RiderSumAssuredLocator} = //label[contains(text(),'Rider sum assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.873" endtime="20200826 19:25:28.874"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>37</arg>
+</arguments>
+<assign>
+<var>${RiderSumAssured}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.874" level="INFO">₹ 5000000.00</msg>
+<msg timestamp="20200826 19:25:28.874" level="INFO">${celldata} = ₹ 5000000.00</msg>
+<status status="PASS" starttime="20200826 19:25:28.874" endtime="20200826 19:25:28.874"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.874" level="INFO">${RiderSumAssured} = ₹ 5000000.00</msg>
+<status status="PASS" starttime="20200826 19:25:28.874" endtime="20200826 19:25:28.874"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>38</arg>
+</arguments>
+<assign>
+<var>${JointLifeSumAssuredLocator}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.875" level="INFO">//label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<msg timestamp="20200826 19:25:28.875" level="INFO">${celldata} = //label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.875" endtime="20200826 19:25:28.875"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.875" level="INFO">${JointLifeSumAssuredLocator} = //label[contains(text(),'Joint Life Sum Assured')]//following-sibling::span[1]</msg>
+<status status="PASS" starttime="20200826 19:25:28.875" endtime="20200826 19:25:28.875"></status>
+</kw>
+<kw name="RCD" library="LoginKeywords">
+<arguments>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>39</arg>
+</arguments>
+<assign>
+<var>${JointLifeSumAssured}</var>
+</assign>
+<kw name="Fetch Cell Data" library="ReadData">
+<arguments>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+</arguments>
+<assign>
+<var>${celldata}</var>
+</assign>
+<msg timestamp="20200826 19:25:28.876" level="INFO">300000</msg>
+<msg timestamp="20200826 19:25:28.876" level="INFO">${celldata} = 300000</msg>
+<status status="PASS" starttime="20200826 19:25:28.876" endtime="20200826 19:25:28.876"></status>
+</kw>
+<msg timestamp="20200826 19:25:28.876" level="INFO">${JointLifeSumAssured} = 300000</msg>
+<status status="PASS" starttime="20200826 19:25:28.875" endtime="20200826 19:25:28.876"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==3</arg>
+</arguments>
+<msg timestamp="20200826 19:25:28.876" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20200826 19:25:28.876" endtime="20200826 19:25:28.877"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:25:28.816" endtime="20200826 19:25:28.877"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:15.089" endtime="20200826 19:25:28.877"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:15.086" endtime="20200826 19:25:28.877"></status>
+</kw>
+<status status="PASS" starttime="20200826 19:24:15.086" endtime="20200826 19:25:28.877" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200826 19:24:14.629" endtime="20200826 19:25:28.877"></status>
+</suite>
+<status status="PASS" starttime="20200826 19:24:14.608" endtime="20200826 19:25:28.882"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Login">Suites.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
